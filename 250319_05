@@ -1,0 +1,43 @@
+a, b, c = map(int, input('당첨번호를 입력하시오 : ').split())
+if a == 2 and b == 3 and c == 9 :
+    print('1억원')
+if a == 2 and b == 3 and c != 9 :
+    print('1천만원')
+if a == 2 and c == 9 and b != 3 :
+    print('1천만원')
+if b == 3 and c == 9 and a != 2 :
+    print('1천만원') 
+if a == 2 and b != 3 and c != 9 :
+    print('1만원')
+if a != 2 and b == 3 and c != 9 :
+    print('1만원')
+if a != 2 and b != 3 and c == 9 :
+    print('1만원')
+if a != 2 and b != 3 and c != 9 : 
+    print('다음 기회에...')
+
+---------------------------------------
+winning_numbers = [2,3,9]
+a, b, c = map(int, input('당첨번호를 입력하시오 : ').split())
+matched_count = (a in winning_numbers) + (b in winning_numbers) + (c in winning_numbers)
+
+if matched_count == 3 :
+    print('1억원')
+if matched_count == 2 :
+    print('1천만원')
+if matched_count == 1 :
+    print('1만원')
+if matched_count == 0 :
+    print('다음기회에..')
+
+--------------------------------------------------------
+x, y = map(int, input('x,y 좌표를입력하세요 : ').split(','))
+
+dist = (x**2 + y**2)**0.5
+
+if dist <=5 :
+    print(x, ',' , y, '는 원의 내부에 있습니다.')
+else : 
+    print(x, ',' , y, '는 원의 외부에 있습니다.')
+
+    
