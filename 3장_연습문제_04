@@ -1,0 +1,10 @@
+char = input("알파벳을 입력하세요: ").lower()
+
+
+vowels = ['a', 'e', 'i', 'o', 'u']
+
+
+if char in vowels:
+    print(f"{char} (은)는 모음입니다.")
+else:
+    print(f"{char} (은)는 자음입니다.")
