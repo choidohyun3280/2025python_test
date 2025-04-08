@@ -1,0 +1,17 @@
+winning_numbers = {2, 3, 9}
+
+user_input = input("세 복권번호를 입력하세요: ")
+user_numbers = set(map(int, user_input.split()))
+
+
+matches = len(winning_numbers & user_numbers)
+
+
+if matches == 3:
+    print("상금 1억원")
+elif matches == 2:
+    print("상금 1천만원")
+elif matches == 1:
+    print("상금 1만원")
+else:
+    print("다음 기회에…")
