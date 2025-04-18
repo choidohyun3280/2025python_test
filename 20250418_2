@@ -1,0 +1,41 @@
+def tuple_sum(tup) :
+    if isinstance(tup, int):
+        return tup
+    else :
+        accum = 0
+        for element in tup :
+            accum += tuple_sum(element)
+    return accum
+
+
+def product_set(set1, set2):
+    res = set()
+    for i in set1:
+        for j in set2:
+            res = res | {(i, j)}
+    return res
+
+def exp(input_set, exponent):
+    res = input_set
+    for _ in range(exponent-1):
+        res = product_set(res, input_set)
+    return res
+
+
+def prob_over(x):
+    A = {1,2,3,4,5,6}
+    C= exp(A,3)
+    tot_cnt = len(C)
+
+
+    cnt = 0
+    for elem in C :
+        if tuple_sum(elem) >= x:
+            cnt += 1
+
+
+    res = cnt/tot_cnt
+    return res
+
+for x in range(3,19):
+    print(f"{x:2d}이상인 확률은{100*prob_over(x):5.2f}%입니다.")
