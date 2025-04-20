@@ -1,0 +1,10 @@
+text = "Park(Java city), Kim(C city), Kang(Bython city), Lee(Bython city), Hong(Ruby city), Cho(Bython city), Koo(C city), Ryu(C++ city)"
+
+
+modified_text = text.replace("Bython", "Python")
+count = text.count("Bython")
+
+
+print("수정된 문자열 :")
+print(modified_text)
+print(f"Bython 문자열은 모두 {count}번 수정했습니다.")
