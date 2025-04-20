@@ -1,0 +1,12 @@
+def parse_birthdate(jumin):
+    year = int(jumin[:2])
+    month = int(jumin[2:4])
+    day = int(jumin[4:6])
+
+
+    if year >= 50:
+        full_year = 1900 + year
+    else:
+        full_year = 2000 + year
+
+    print(f"{full_year}년 {month}월 {day}일")
